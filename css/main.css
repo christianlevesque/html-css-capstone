@@ -4,6 +4,7 @@
 
 /* Variables */
 :root {
+	--body-text: #333;
 	--primary: #30ca95;
 	--ui-dark: #aaa;
 	--ui-accent: #e5e5e5;
@@ -23,7 +24,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 	font-family: "Poppins", Helvetica, sans-serif;
-	color: #333;
+	color: var(--body-text);
 }
 
 nav {
@@ -185,7 +186,28 @@ button.primary:hover {
 
 .hero h2 {
 	font-weight: 300;
-	color: #a9a9a9;
+	color: var(--ui-dark);
+}
+
+/* Inspirational quotes */
+.inspirational-quote {
+	color: var(--ui-light);
+	background: var(--primary);
+	padding: 50px 0;
+}
+
+.inspirational-quote .quote {
+	font-size: 36px;
+	line-height: 40px;
+}
+
+.inspirational-quote .author {
+	text-align: right;
+	font-size: 18px;
+}
+
+.inspirational-quote .additional-info {
+	font-weight: 200;
 }
 
 /* Sections */
@@ -257,6 +279,9 @@ button.primary:hover {
 }
 
 /* Employment */
+.employment {
+	padding-bottom: 100px;
+}
 .employment img {
 	height: 50px;
 	filter: grayscale(100%);
