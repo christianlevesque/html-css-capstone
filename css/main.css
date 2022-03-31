@@ -1,3 +1,10 @@
+:root {
+	--primary: #30ca95;
+	--ui-dark: #aaa;
+	--ui-accent: #e5e5e5;
+	--ui-light: #fff;
+}
+
 *, *::before, *::after {
 	box-sizing: border-box;
 }
@@ -7,7 +14,6 @@ html, body {
 	width: 100%;
 	margin: 0;
 	padding: 0;
-	background-color: #f5f5f5;
 	font-family: "Poppins", Helvetica, sans-serif;
 }
 
@@ -38,7 +44,8 @@ p {
 }
 
 button {
-	border: 2px solid #aaa;
+	background: var(--ui-light);
+	border: 2px solid var(--ui-dark);
 	border-radius: 100px;
 	padding: 10px 25px;
 	cursor: pointer;
@@ -47,18 +54,19 @@ button {
 }
 
 button:hover {
-	background-color: #aaa;
-	color: #f5f5f5;
+	background-color: var(--ui-dark);
+	color: var(--ui-light);
 }
 
 button.primary {
-	border-color: #30ca95;
+	border-color: var(--primary);
 }
 
 button.primary:hover {
-	background-color: #30ca95;
+	background-color: var(--primary);
 }
 
+/* Utilities */
 .row {
 	display: flex;
 	flex-wrap: wrap;
@@ -68,13 +76,14 @@ button.primary:hover {
 	flex: 0 0 initial;
 }
 
+/* Sections */
 .site-section header {
 	margin: 50px 0 30px;
 }
 
 .site-section h3 {
 	display: inline-block;
-	border-bottom: 1px solid #aaa;
+	border-bottom: 1px solid var(--ui-accent);
 	position: relative;
 	margin: 0;
 	padding-right: 25px;
@@ -85,11 +94,52 @@ button.primary:hover {
 	position: absolute;
 	bottom: -2px;
 	left: 0;
-	background: #30ca95;
+	background: var(--primary);
 	height: 3px;
-	width: 30%;
+	width: 45px;
 }
 
+/* Testimonials */
+.testimonial {
+	position: relative;
+	width: 100%;
+	border: 2px solid var(--ui-accent);
+	border-radius: 8px;
+}
+
+.testimonial-logo {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	top: -38px;
+	left: -38px;
+	border-radius: 75px;
+}
+
+.testimonial-content {
+	padding: 25px 30px 25px 50px;
+}
+
+.testimonial .quote {
+	font-style: italic;
+}
+
+.testimonial-name, .testimonial-company {
+	line-height: 16px;
+}
+
+.testimonial-name {
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.testimonial-company {
+	font-weight: 300;
+	font-size: 12px;
+	color: var(--ui-dark);
+}
+
+/* List */
 .fancy-list {
 	list-style: none;
 	padding-left: 0;
@@ -109,5 +159,5 @@ button.primary:hover {
 }
 .fancy-list i {
 	font-size: 36px;
-	color: #30ca95;
+	color: var(--primary);
 }
