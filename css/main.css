@@ -13,6 +13,7 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
 	text-transform: capitalize;
+	font-weight: 600;
 }
 
 h1 {
@@ -25,6 +26,10 @@ h1 {
 h2 {
 	font-size: 16px;
 	margin-bottom: 20px;
+}
+
+h3 {
+	font-size: 21px;
 }
 
 p {
@@ -52,4 +57,57 @@ button.primary {
 
 button.primary:hover {
 	background-color: #30ca95;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.row .column {
+	flex: 0 0 initial;
+}
+
+.site-section header {
+	margin: 50px 0 30px;
+}
+
+.site-section h3 {
+	display: inline-block;
+	border-bottom: 1px solid #aaa;
+	position: relative;
+	margin: 0;
+	padding-right: 25px;
+	line-height: 40px;
+}
+.site-section h3:after {
+	content: "";
+	position: absolute;
+	bottom: -2px;
+	left: 0;
+	background: #30ca95;
+	height: 3px;
+	width: 30%;
+}
+
+.fancy-list {
+	list-style: none;
+	padding-left: 0;
+}
+.fancy-list li {
+	width: 50%;
+	margin-bottom: 15px;
+	padding-right: 50px;
+	display: flex;
+}
+.fancy-list h4 {
+	margin-top: 0;
+}
+.fancy-list .icon-container {
+	width: 75px;
+	flex-shrink: 0;
+}
+.fancy-list i {
+	font-size: 36px;
+	color: #30ca95;
 }
