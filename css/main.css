@@ -26,6 +26,10 @@ html, body {
 	color: #333;
 }
 
+nav {
+	padding: 30px 0;
+}
+
 h1, h2, h3, h4, h5, h6 {
 	text-transform: capitalize;
 	font-weight: 600;
@@ -97,6 +101,10 @@ button.primary:hover {
 	justify-content: space-between;
 }
 
+.row.align-center {
+	align-items: center;
+}
+
 /* Site containers */
 .container {
 	margin: 0 auto;
@@ -129,6 +137,36 @@ button.primary:hover {
 /***********
  * Widgets *
  **********/
+
+/* Header text logo */
+.header-text-logo {
+	--height: 50px;
+}
+.header-text-logo .letter-logo {
+	display: inline-block;
+	width: var(--height);
+	height: var(--height);
+	color: var(--ui-light);
+	background: var(--primary);
+	border-radius: 25px;
+	font-weight: 700;
+	font-size: 30px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: var(--height);
+	margin-right: 25px;
+}
+.header-text-logo .first-name, .header-text-logo .last-name {
+	font-size: 25px;
+	line-height: var(--height);
+	vertical-align: middle;
+}
+.header-text-logo .first-name {
+	font-weight: 600;
+}
+.header-text-logo .last-name {
+	font-weight: 300;
+}
 
 /* Heroes */
 .hero {
@@ -228,7 +266,7 @@ button.primary:hover {
 }
 
 /* Lists */
-.fancy-list, .social-links {
+.fancy-list, .links-list {
 	list-style: none;
 	padding-left: 0;
 }
@@ -249,16 +287,20 @@ button.primary:hover {
 	font-size: 36px;
 	color: var(--primary);
 }
-.social-links li {
+
+.links-list {
+	margin: 0;
+}
+.links-list li {
 	margin-right: 18px;
 }
-.social-links i {
+.links-list i {
 	font-size: 24px;
 }
-.social-links a {
+.links-list a {
 	color: var(--ui-dark);
 }
-.social-links a:hover {
+.links-list a:hover {
 	color: var(--primary);
 }
 
@@ -266,6 +308,12 @@ button.primary:hover {
 .site-footer {
 	padding: 25px 0;
 	border-top: 2px solid var(--ui-accent);
+}
+.site-footer p {
+	margin: 0;
+}
+.site-footer p.disclaimer {
+	margin-top: 25px;
 }
 .disclaimer {
 	font-weight: 300;
