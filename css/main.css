@@ -1,3 +1,8 @@
+/**********
+ * Global *
+ *********/
+
+/* Variables */
 :root {
 	--primary: #30ca95;
 	--ui-dark: #aaa;
@@ -5,10 +10,12 @@
 	--ui-light: #fff;
 }
 
+/* Reset box sizing */
 *, *::before, *::after {
 	box-sizing: border-box;
 }
 
+/* Universal selectors*/
 html, body {
 	min-height: 100%;
 	width: 100%;
@@ -66,7 +73,11 @@ button.primary:hover {
 	background-color: var(--primary);
 }
 
-/* Utilities */
+/*************
+ * Utilities *
+ ************/
+
+/* Rows and columns */
 .row {
 	display: flex;
 	flex-wrap: wrap;
@@ -76,7 +87,68 @@ button.primary:hover {
 	flex: 0 0 initial;
 }
 
+.row.justify-around {
+	justify-content: space-around;
+}
+
+/* Site containers */
+.container {
+	margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+	.container {
+		width: 400px;
+	}
+}
+
+@media (min-width: 900px) {
+	.container {
+		width: 600px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 900px;
+	}
+}
+
+@media (min-width: 1600px) {
+	.container {
+		width: 1200px;
+	}
+}
+
+/***********
+ * Widgets *
+ **********/
+
+/* Heroes */
+.hero {
+	display: flex;
+	padding: 100px;
+}
+
+.hero-profile-pic {
+	width: 400px;
+	height: 400px;
+	border-radius: 250px;
+	margin-right: 50px;
+	border: 20px solid white;
+	box-shadow: 0 0 25px #ccc;
+}
+
+.hero h2 {
+	font-weight: 300;
+	color: #a9a9a9;
+}
+
 /* Sections */
+.site-section {
+	padding-bottom: 25px;
+}
+
 .site-section header {
 	margin: 50px 0 30px;
 }
@@ -137,6 +209,15 @@ button.primary:hover {
 	font-weight: 300;
 	font-size: 12px;
 	color: var(--ui-dark);
+}
+
+/* Employment */
+.employment img {
+	height: 50px;
+	filter: grayscale(100%);
+}
+.employment img:hover {
+	filter: unset;
 }
 
 /* List */
