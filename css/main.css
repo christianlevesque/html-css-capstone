@@ -192,6 +192,7 @@ button.primary:hover {
 	top: -38px;
 	left: -38px;
 	border-radius: 75px;
+	border: 2px solid var(--ui-accent);
 }
 
 .testimonial-content {
